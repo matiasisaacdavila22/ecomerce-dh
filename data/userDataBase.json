@@ -1,0 +1,47 @@
+[
+    {
+        "id": 4,
+        "name": "thomas isaac davila",
+        "userName": "tomate",
+        "fecha": "2021-04-21",
+        "domicilio": "racuh 1019",
+        "password": "admin123",
+        "perfil": "comprar",
+        "categorias": [
+            "electro",
+            "moda",
+            "hogar",
+            "jugueteria",
+            "vidaSana"
+        ],
+        "file": "20180119_191744.jpg"
+    },
+    {
+        "id": 2,
+        "name": "karina dela",
+        "userName": "kadeta",
+        "fecha": "2021-04-09",
+        "domicilio": "manchare2021",
+        "password": "dasfsdfdas",
+        "perfil": "comprar",
+        "categorias": [
+            "electro",
+            "vidaSana"
+        ],
+        "file": "20180119_191744.jpg"
+    },
+    {
+        "id": 1,
+        "name": "karina dela",
+        "userName": "kadeta",
+        "fecha": "2021-04-09",
+        "domicilio": "manchare2021",
+        "password": "dasfsdfdas",
+        "perfil": "comprar",
+        "categorias": [
+            "electro",
+            "vidaSana"
+        ],
+        "file": "20180119_191744.jpg"
+    }
+]
