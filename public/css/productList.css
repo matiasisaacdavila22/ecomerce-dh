@@ -1,0 +1,339 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Bebas Neue", cursive;
+  }
+  
+  .container {
+    width: 100%;
+    margin: auto;
+    margin-top: 250px;
+  }
+  
+  .titular {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(47, 47, 49);
+    margin-top: 24px;
+    margin-bottom: 24px;
+    font-size: x-large;
+   /* box-shadow: 0px 0px 10px rgb(100, 100, 100);*/
+  }
+  
+  .titular i {
+    font-size: 32px;
+  }
+  
+  .productos {
+    display: flex;
+    flex-flow: column;
+    width: 90%;
+    margin: auto;
+    margin-top: 16px;
+    margin-bottom: 4px;
+  /*  background-color:rgb(180, 180, 180);*/
+    border-radius: 8px;
+    padding-bottom: 16px;
+    padding-top: 16px;
+  }
+  .pr-article {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    background-color: rgb(226, 224, 224);
+    margin: auto;
+    margin-top: 8px;
+    border: 1px solid white;
+    border-radius: 8px;
+  }
+  .pr-article h2 {
+    color: rgb(99, 98, 98);
+    margin-bottom: 8px;
+    font-weight: 300;
+  }
+  
+  .pr-producto {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .pr-producto img {
+    width: 90%;
+    border-radius: 8px;
+  }
+  
+  .pr-descripcion {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 5px;
+  }
+  
+  .pr-descripcion p {
+    color: rgb(99, 98, 98);
+    font-size: 18px;
+  }
+  
+  .pr-row {
+    display: flex;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    justify-content: space-around;
+    border: 1px solid white;
+    border-bottom: 0;
+  }
+  
+  .pr-btns {
+    display: flex;
+    align-items: center;
+  }
+  
+  .pr-cantidad input {
+    width: 40%;
+    border-radius: 5px;
+    border-color: rgb(204, 203, 203);
+    margin: 2px;
+    transition: all 350ms;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+  }
+  
+  .pr-cantidad input:focus {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
+  
+  .pr-cantidad button {
+    width: 20%;
+    font-size: 24px;
+    font-weight: 900;
+    border: 0.5px solid gray;
+    border-radius: 8px;
+    padding: 7px;
+    background-color:rgb(144, 147, 145);
+    transition: all 350ms;
+  }
+  
+  .pr-cantidad button:hover {
+    background-color:rgb(61, 61, 61);
+    color: antiquewhite;
+    
+  }
+  
+  .pr-cantidad h2 {
+    margin-left: 45px;
+  }
+  
+  /*.resumen {
+    display: flex;
+    flex-flow: column;
+    width: 90%;
+    background-color:  rgb(226, 224, 224);
+    margin: auto;
+  
+    margin-top: 4px;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-radius: 8px;
+  }
+  .subTotal {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  
+  .subTotal button {
+    width: 45%;
+    border-radius: 5px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(61, 61, 61);
+    transition: all 350ms;
+  
+    color: rgb(251, 251, 251);
+    padding: 5px;
+  }
+  
+  .subTotal button:hover {
+    background-color: rgb(144, 147, 145);
+    color: black;
+  }
+  
+  .subTotal label {
+    width: 25%;
+    color: rgb(99, 98, 98);
+    transition: all 350ms;
+    font-size: 24px;
+    text-align: center;
+    padding: 5px;
+  }
+  
+  .subTotal input {
+    width: 25%;
+    border-radius: 5px;
+    border: 0;
+    font-size: 20px;
+  
+    text-align: right;
+    padding: 5px;
+  }
+  
+  .total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  
+  .total button {
+    width: 45%;
+    border-radius: 5px;
+    border: 1px solid white;
+    color: white;
+    background-color: rgb(61, 61, 61);
+    transition: all 350ms;
+  
+    padding: 5px;
+  }
+  
+  .total button:hover {
+    background-color: rgb(144, 147, 145);
+    color: black;
+  }
+  
+  .total label {
+    width: 25%;
+    color:rgb(99, 98, 98);;
+    transition: all 350ms;
+    font-size: 24px;
+    text-align: center;
+    padding: 5px;
+  }
+  
+  .total input {
+    width: 25%;
+    border-radius: 5px;
+    border: 0;
+    font-size: 20px;
+  
+    text-align: right;
+    padding: 5px;
+  }
+  
+  .cart-btns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  
+  .cart-btns button {
+    width: 45%;
+    border-radius: 5px;
+    border: 1px solid white;
+  
+    background-color: rgb(29, 30, 30);
+  
+    color: rgb(243, 245, 243);
+  
+    transition: all 350ms;
+  
+    padding: 5px;
+  }
+  
+  .cart-btns button:hover {
+    background-color: rgb(144, 147, 145);
+    color: black;
+    border: 1px solid rgb(29, 30, 30);
+  }
+  
+  .caja{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    border-top: 2px solid #ebebeb;
+    padding: 15px;
+  }
+  */
+  
+  .pr-iconoBorrar{
+    display: block;
+    font-size: 24px;
+    padding:8px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #232323;
+    background-color: #FFF;
+    border-radius: 20%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+    color: #232323;
+    transition: all 350ms;
+  }
+  
+  .pr-iconoBorrar:hover{
+    background-color: rgb(79, 3, 3);
+    border: solid 1px white;
+    color: white;
+  }
+  
+ /* .footer {
+    height: 200px;
+  }*/
+  
+  @media (min-width: 900px) {
+    .container {
+      width: 1200px;
+      margin-top: 150px;
+    }
+  
+  
+    .pr-article {
+      flex-flow: row;
+    }
+  
+    .pr-producto {
+      width: 25%;
+    }
+  
+    .pr-descripcion {
+      padding: 10px;
+      width: 80%;
+    }
+  
+    .pr-row {
+      width: 40%;
+      align-items: center;
+      border-top: 0;
+      border-right: 0;
+    }
+  
+    .pr-cantidad h2 {
+      margin-left: 24px;
+    }
+  
+    .pr-btns {
+      margin-left: 4px;
+    }
+  
+    .pr-precio {
+      margin-right: 8px;
+    }
+  }
