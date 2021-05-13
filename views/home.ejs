@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    
+<head>
 <%- include('partials/head') %>
+</head>
 
 <body>
     <%- include('partials/header') %>
@@ -13,22 +15,20 @@
     <main class="main">
         <section class="ultimaVisita">
             <h2 class="titulares">Basado en tu última visita</h2>
-
-          
+         
                 <% products.forEach(product => { %>
                     <% if(product.category == 'visited'){ %>
-                    <%- include('partials/product', { product })%>
+                    <%- include('product', { product })%>
                     <% } %>
                 <% })%>
            
-
         </section>
         <section class="ofertas">
             <h2 class="titulares">Ofertas</h2>
             
             <% products.forEach(product => { %>
                 <% if(product.category != 'visited'){ %>
-                <%- include('partials/product', { product })%>
+                <%- include('product', { product })%>
                 <% } %>
             <% })%>
 

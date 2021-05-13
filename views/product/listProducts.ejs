@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../partials/head')%>
+    <link rel='stylesheet' href='/css/productList.css' />
+<body>
+    <%- include('../partials/header')%>
+    <main>
+
+        <div class="container">
+            <div class="titular">
+                <h2 class="titulo">Productos</h2>
+            </div>
+            <section class="detalle">
+                <a href="/product/create"><button style="height: 48px; font-size: 32px; border-radius: 8px;">New Product</button></a>
+                <div class="productos">
+                    <% products.forEach(product => { %>
+                        <%- include('./product', { product })%>
+                    <% })%>
+                </div>
+            </section>
+
+        </div>
+    </main>
+    
+    <%- include('../partials/footer')%>
+
+</body>
+
+</html>

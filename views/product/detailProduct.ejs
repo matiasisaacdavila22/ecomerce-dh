@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head') %>
+<link rel='stylesheet' href='/css/productDetails.css' />
+
+<body>
+    <%- include('../partials/header') %>
+   <!-- <section>
+        <img id="banner" src="/images/img-home-banner.jpg" width="100%" alt="Banner de ofertas">
+    </section>
+-->
+
+    <main>
+
+        <div class="container">
+            <div class="titular">
+                <h2 class="titulo">Detalle Producto</h2>
+            </div>
+            <!-- action="/products/<%=product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">-->
+            <form action="/" method="GET">
+                <article class="product-create-article">
+                    <div class="icoExit">
+                        <a href="/">
+                            <i class="fas fa-times-circle"></i>
+                        </a>
+                    </div>
+                    <div class="product-create-file">
+                        <h2><%=product.name %></h2>
+                        <img src="/images/product/<%= product.image %>" alt="<%=product.name %>" class="detail-product_img">
+                        </div>
+                    <div class="setction">
+                        <div class="product-create-category">
+                            <h2>Categoria</h2>
+                            <select class="product-form-select" name="category" id="category" disabled>
+                                <option>Selecciona una categoria</option>
+                                <option value="1">vinos</option>
+                                <option value="2">Espumantes</option>
+                                <option value="3">cervezas</option>
+                            </select>
+                        </div>
+                        <div class="product-create-name">
+                            <h2>Nombre</h2>
+                            <input type="text" name="name" placeholder="Nombre" required maxlength="30"
+                                value="<%=product.name %>" disabled>
+                        </div>
+                        <div class="product-create-descripcion">
+                            <h2>Descripcion</h2>
+                            <textarea name="description" id="descripction" cols="30"
+                                rows="7" disabled><%=product.description %></textarea>
+                        </div>
+                        <div class="product-create-row">
+                            <div class="product-create-stock">
+                                <h2>Stock:</h2>
+                                <input type="number" name="stock" class="edit-stock" required
+                                    maxlength="6" value="<%=product.stock %>" disabled>
+                            </div>
+                            <div class="product-create-price">
+                                <h2>Precio:</h2>
+                                <input type='text' name="price" required placeholder="$" maxlength="6"
+                                    value="<%=product.price %>" disabled>
+                            </div>
+                        </div>
+                        <div class="btns">
+                            <button class="btn-agregar" type='submit'>Comprar.......=><i class="fas fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+
+                </article>
+            </form>
+    </main>
+
+    <%- include('../partials/footer')%>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+    $('#category > option[value="<%=product.category %>"]').attr('selected', 'selected');
+});
+</script>
+</body>
+
+</html>

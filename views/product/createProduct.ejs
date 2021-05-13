@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head')%>
+<link rel='stylesheet' href='/css/form-product.css' />
+    <body>
+        <%- include('../partials/header')%>
+            <main>
+
+                <div class="container">
+                    <div class="titular">
+                        <h2 class="titulo">Agregar Producto</h2>
+                    </div>
+                    <form action="/product" method="POST" enctype="multipart/form-data">
+                        <article class="product-create-article">
+                            <div class="icoExit">
+                                <a href="/product">
+                                    <i class="fas fa-times-circle"></i>
+                                </a>
+                            </div>
+                            <div class="product-create-file">
+                                <h2>Imagen</h2>
+                                <input type="file" name="image">
+                            </div>
+                            <div class="setction">
+                                <div class="product-create-category">
+                                    <h2>Categoria</h2>
+                                    <select class="product-form-select" name="category">
+                                        <option selected>Selecciona una categoria</option>
+                                        <option value="1">vinos</option>
+                                        <option value="2">Espumantes</option>
+                                        <option value="3">cervezas</option>
+                                    </select>
+                                </div>
+                                <div class="product-create-name">
+                                    <h2>Nombre</h2>
+                                    <input type="text" name="name" placeholder="Nombre" required maxlength="30">
+                                </div>
+                                <div class="product-create-descripcion">
+                                    <h2>Descripcion</h2>
+                                    <textarea name="description" id="descripction" cols="30" rows="10"></textarea>
+                                </div>
+                                <div class="product-create-row">
+                                    <div class="product-create-stock">
+                                        <h2>Stock:</h2>
+                                        <input type="number" value="1"  name="stock" class="edit-stock" required maxlength="6">
+                                    </div>
+                                    <div class="product-create-price">
+                                        <h2>Precio:</h2>
+                                        <input type='text' name="price" required placeholder="$" maxlength="6">
+                                    </div>
+                                </div>
+                                <div class="btns">
+                                    <button class="btn-agregar" type='submit'>Agregar</button>
+                                    <button class="btn-delete" type='reset'><i class="fas fa-trash-alt"></i></button>
+                                </div>
+                            </div>
+
+                        </article>
+                    </form>
+            </main>
+
+            <%- include('../partials/footer')%>
+
+    </body>
+
+</html>

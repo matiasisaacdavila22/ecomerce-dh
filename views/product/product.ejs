@@ -1,0 +1,27 @@
+<article class="pr-article">
+    <div class="pr-iconoBorrar"><i class="fas fa-trash-alt"></i></div>
+    <div class="pr-producto">
+        <h2><%= product.name %></h2>
+        <img src="/images/product/<%= product.image %>" alt="<%= product.name %>" class="product_img">
+    </div>
+    <div class="pr-descripcion">
+        <h2>Descripcion</h2>
+        <p><%= product.description %></p>
+    </div>
+    <div class="pr-row">
+        <div class="pr-cantidad">
+            <h2>Cantidad</h2>
+            <div class="pr-btns">
+                <input type="text" value="<%=product.stock %>" class="cantidad">
+            </div>        
+        </div>
+        <div class="btns">
+            <a href="/product/<%=product.id %>/edit"><button class="btn-edit">Editar</button></a>
+            <button class="btn-stop">Pausar</button>
+        </div>
+        <div class="pr-precio">
+            <h2>Total</h2>
+            <h2><%= product.price %></h3>
+        </div>
+    </div>
+</article>

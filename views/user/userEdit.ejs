@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include('partials/head') %>
+    <%- include('../partials/head') %>
 
 <body>
-    <%- include('partials/header') %>
+    <%- include('../partials/header') %>
     <section>
         <img id="banner" src="/images/img-home-banner.jpg" width="100%" alt="Banner de ofertas">
     </section>
     <main class="main-register">
-
-        <form action="/user/register" method="POST" class="form-register">
+        <div class="container">
+        <form action="/user/edit?_method=put" method="POST" class="form-register">
+            <div class="control-form">
+                <label for="" class="titulo">ID</label>
+                <input type="text" name="id" class="control"  value="<%=userSearch.id %>" readonly>
+            </div>
             <div class="control-form">
                 <label for="" class="titulo">Nombre y Apellido</label>
-                <input type="text" name="name" placeholder="nombre apellido" class="control" required minlength="3" maxlength="30">
+                <input type="text" name="name" placeholder="nombre apellido" class="control" required minlength="3" maxlength="30" value="<%=userSearch.name %>">
             </div>
             <div class="control-form">
                 <label for="" class="titulo">Nombre de Usuario</label>
-                <input type="text" name="userName" placeholder="usuario" class="control" required minlength="3" maxlength="30">
+                <input type="text" name="userName" placeholder="usuario" class="control" required minlength="3" maxlength="30" value="<%=userSearch.userName %>">
             </div>
             <div class="control-form">
                 <label for="" class="titulo">Feche de Nacimiento</label>
-                <input type="date" name="fecha" required>
+                <input type="date" name="fecha" value="<%=userSearch.fecha %>" required>
             </div>
             <div class="control-form">
                 <label for="" class="titulo">Domicilio</label>
-                <input type="text" name="domicilio" placeholder="rauch 1019" class="control" required maxlength="30">
+                <input type="text" name="domicilio" placeholder="rauch 1019" class="control" value="<%=userSearch.domicilio %>" required maxlength="30">
             </div>
             <div class="control-form">
                 <label for="" class="titulo">Perfil de Usuario</label>
@@ -42,23 +46,26 @@
             </div>
             <div class="control-form">
                 <label for="" class="titulo">Foto de Perfil</label>
-                <input type="file" name="photo">
+                <input type="file" name="photo"  value="<%=userSearch.photo %>">
             </div>
             <div class="control-form">
                 <label for="" class="titulo">Password</label>
-                <input type="password" name="password" placeholder="Password" class="control" minlength="8" maxlength="30" required>
+                <input type="password" name="password" placeholder="Password" class="control" minlength="8" maxlength="30"  >
             </div>
             <div class="control-form">
                 <label for="" >El password debe tener un largo superior a 8 caracteres</label>
-                <input type="password" placeholder="Confirma tu Password" class="control" minlength="8" maxlength="30" required>
+                <input type="password" placeholder="Confirma tu Password" class="control" minlength="8" maxlength="30" >
             </div>
-            <button type="submit" class="button-submit">Enviar</button>
-            <button type="reset" class="button-reset">Borrar</button>
+            <button type="submit" class="button-submit">Editar</button>
         </form>
+        <form class="form-delete" method="POST" action="/user/delete/<%=userSearch.id %>?_method=DELETE">
+            <button type="submit" class="button-reset">Borrar</button>
+        </form>
+    </div>   
         
     </main>
 
-    <%- include('partials/footer') %> 
+    <%- include('../partials/footer') %> 
 
 </body>
 
