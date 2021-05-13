@@ -17,8 +17,8 @@ let storage = multer.diskStorage({
 
 let upload = multer({storage: storage});
 
-router.get('/register', userController.register);
-router.post('/register', upload.single('file'), userController.create); 
+router.get('/register', userController.create);
+router.post('/register', upload.single('file'), userController.store); 
 
 router.get('/login', userController.login); 
 

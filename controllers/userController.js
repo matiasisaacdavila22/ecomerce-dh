@@ -6,7 +6,7 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const controller = {
     create: (req, res) => {
-        return res.render('user/register');
+        return res.render('register');
     },
 
 	store: (req, res) => {
