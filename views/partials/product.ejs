@@ -1,0 +1,11 @@
+<article class="article">
+    <a href="/product/<%= product.id %>">
+    <img src="/images/<%= product.image %>" alt="Cafetera" class="product_img">
+    </a>
+    <div class="caja">
+        <div class="iconoEnvio"><i class="fas fa-truck"></i></div>
+        <p class="precio">$6<%= product.price %></p>
+        <p class="descuento"><%= product.descuento %>% off</p>
+        <p class="descripcion"><%= product.name %></p>
+    </div>
+</article>

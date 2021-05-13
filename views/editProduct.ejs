@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel='stylesheet' href='/css/normalize.css' />
+        <link rel='stylesheet' href='/css/styles.css' />
+        <link rel="stylesheet" href="/css/productDetails.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    
+        <title>MercadoLiebre</title>
+    </head>
+
+<body>
+    <%- include('partials/header') %>
+    <section>
+        <img id="banner" src="/images/img-home-banner.jpg" width="100%" alt="Banner de ofertas">
+    </section>
+
+
+    <main>
+        <div class="detail-titular">
+            <h2 class="detail-titulo">Editar de Producto</h2>
+        </div>
+        <div class="detail-container">
+            <section class="detail-detalle">
+                <div class="detail-productos">
+                    <article class="detail-article">
+                        <div class="detail-producto">
+                            <h2><%= product.name %></h2>
+                            <img src="/images/<%= product.image %>" alt="<%= product.name %>" class="detail-product_img">
+                        </div>
+                        <div class="detail-descripcion">
+                            <h2>Descripcion</h2>
+                            <p><%= product.description %></p>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-precio">
+                                <h2>Precio</h2>
+                                <h2>$450</h3>
+                            </div>
+                            <div class="detail-cantidad">
+                                <h2>Stock</h2>
+                                <div class="detail-btns">
+                                    <button class="detail-edit">Editar</button><input type="text" value="1" class="detail-cantidad"><button class="detail-stop">Pausar</button>
+                                </div>        
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+
+    <%- include('partials/footer') %>    
+
+    </main>
+</body>
+
+</html>

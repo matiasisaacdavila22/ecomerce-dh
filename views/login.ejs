@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('partials/head') %>
+
+<body>
+    <%- include('partials/header') %>
+    <section>
+        <img id="banner" src="/images/img-home-banner.jpg" width="100%" alt="Banner de ofertas">
+    </section>
+    <main class="main-login">
+        <form action="/login" method="POST" class="form-login">
+            <h2>Login</h2>
+           
+            <div class="control-form">
+                <input type="text" name="userName" placeholder="Nombre de usuario" class="control" required >
+            </div>
+            <div class="control-form">
+                <input type="password" placeholder="Tu Contraseña" class="control" required>
+            </div>
+            <button type="submit" class="button-login">Enviar</button>
+            <br>
+            <div class="noRegistrado">No estas registrado? <a href="/user/register">Registrarme</a></div>
+         </form>
+        
+    </main>
+
+    <%- include('partials/footer') %> 
+
+</body>
+
+</html>

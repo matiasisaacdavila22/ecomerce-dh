@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('partials/head') %>
+
+<body>
+    <%- include('partials/header') %>
+    <section>
+        <img id="banner" src="/images/img-home-banner.jpg" width="100%" alt="Banner de ofertas">
+    </section>
+    <main class="main-register">
+
+        <form action="/user/register" method="POST" class="form-register">
+            <div class="control-form">
+                <label for="" class="titulo">Nombre y Apellido</label>
+                <input type="text" name="name" placeholder="nombre apellido" class="control" required minlength="3" maxlength="30">
+            </div>
+            <div class="control-form">
+                <label for="" class="titulo">Nombre de Usuario</label>
+                <input type="text" name="userName" placeholder="usuario" class="control" required minlength="3" maxlength="30">
+            </div>
+            <div class="control-form">
+                <label for="" class="titulo">Feche de Nacimiento</label>
+                <input type="date" name="fecha" required>
+            </div>
+            <div class="control-form">
+                <label for="" class="titulo">Domicilio</label>
+                <input type="text" name="domicilio" placeholder="rauch 1019" class="control" required maxlength="30">
+            </div>
+            <div class="control-form">
+                <label for="" class="titulo">Perfil de Usuario</label>
+                <label><input type="radio" name="perfil" value="comprar">Comprar</label>
+                <label><input type="radio" name="perfil" value="vender">Vender</label>
+            </div>
+            <div class="categorias">
+                <label for="" class="titulo">Intereses</label>
+                <label><input type="checkbox" name="categorias" value="electro">Electro</label>
+                <label><input type="checkbox" name="categorias" value="moda">Moda</label>
+                <label><input type="checkbox" name="categorias" value="hogar">Hogar</label>    
+                <label><input type="checkbox" name="categorias" value="jugueteria">Jugueteria</label>
+                <label><input type="checkbox" name="categorias" value="vidaSana">Vida Sana</label>  
+            </div>
+            <div class="control-form">
+                <label for="" class="titulo">Foto de Perfil</label>
+                <input type="file" name="photo">
+            </div>
+            <div class="control-form">
+                <label for="" class="titulo">Password</label>
+                <input type="password" name="password" placeholder="Password" class="control" minlength="8" maxlength="30" required>
+            </div>
+            <div class="control-form">
+                <label for="" >El password debe tener un largo superior a 8 caracteres</label>
+                <input type="password" placeholder="Confirma tu Password" class="control" minlength="8" maxlength="30" required>
+            </div>
+            <button type="submit" class="button-submit">Enviar</button>
+            <button type="reset" class="button-reset">Borrar</button>
+        </form>
+        
+    </main>
+
+    <%- include('partials/footer') %> 
+
+</body>
+
+</html>
