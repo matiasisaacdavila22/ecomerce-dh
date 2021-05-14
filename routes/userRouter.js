@@ -11,6 +11,7 @@ let storage = multer.diskStorage({
     },
     filename: (req, file, cb) => {
         let newFileName = 'user-'+Date.now() + path.extname(file.originalname);
+        req.body.file = newFileName;
         cb(null, newFileName);
     }
 });
@@ -22,12 +23,12 @@ router.post('/register', upload.single('file'), userController.store);
 
 router.get('/login', userController.login); 
 
-router.get('/list', userController.list); 
+router.get('/', userController.list); 
 
 router.get('/search', userController.search); 
 
 router.get('/edit/:id', userController.edit);
-router.put('/edit', userController.update);
+router.put('/edit',upload.single('file'), userController.update);
 
 router.delete('/delete/:id', userController.delete);
 

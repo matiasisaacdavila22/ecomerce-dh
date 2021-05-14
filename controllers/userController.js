@@ -1,6 +1,6 @@
 const { render } = require('ejs');
 let jsonDatabaseP = require('../model/jsonDatabase');
-let model = jsonDatabaseP('productsDataBase')
+let model = jsonDatabaseP('userDataBase')
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
@@ -10,8 +10,12 @@ const controller = {
     },
 
 	store: (req, res) => {
-
+		console.log(req.body)
+		if(!req.body.file){
+			req.body.file = 'default.png';
+		}
 		let userNew = req.body;	
+		req.body.condition = 1;
 		model.create(userNew);
 		return res.render('user/login');
 
@@ -21,7 +25,8 @@ const controller = {
 	},
 
 	list: (req, res) => {
-		return	res.send('list de user');
+		let users = model.all();
+		return res.render('user/userList', {users:users});
 	},
 
 	search: (req, res) => {

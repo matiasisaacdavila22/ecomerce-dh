@@ -24,10 +24,11 @@ const controller = {
 	
 	// Create -  Method to store
 	store: (req, res) => {
-		if(req.image){
+		console.log(req.body)
+		if(req.file){
 			let productNew = req.body;  
 			   model.create(productNew);
-			   res.redirect('/products');
+			   res.redirect('/product');
 		 }else{
 			return res.render('product/createProduct');
 		 }
@@ -42,8 +43,8 @@ const controller = {
 		console.log(req.body)
 		let productUpdate = req.body;
         productUpdate.id = req.params.id;
-        if(!productUpdate.image){
-            productUpdate.image = model.find(req.params.id).image;
+        if(!productUpdate.file){
+            productUpdate.file = model.find(req.params.id).file;
         }
         console.log(productUpdate);
         model.update(productUpdate);
