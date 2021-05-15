@@ -122,5 +122,53 @@
   "password": "sdsdsdsdsd",
   "file": "default.png",
   "id": 9
+ },
+ {
+  "name": "Matias Davila",
+  "userName": "matias",
+  "fecha": "2021-05-20",
+  "domicilio": "racuh 1019",
+  "categorias": [
+   "moda",
+   "jugueteria",
+   "vidaSana"
+  ],
+  "file": "user-1621016489308.jpg",
+  "password": "fdsfdasfdf",
+  "condition": 1,
+  "id": 10
+ },
+ {
+  "name": "",
+  "userName": "",
+  "fecha": "2021-05-12",
+  "domicilio": "",
+  "password": "",
+  "file": "default.png",
+  "condition": 1,
+  "id": 11
+ },
+ {
+  "name": "Matias Davila",
+  "userName": "matias",
+  "fecha": "2021-05-16",
+  "domicilio": "rauch1019",
+  "perfil": "comprar",
+  "password": "fdasfdasfdas",
+  "file": "default.png",
+  "condition": 1,
+  "id": 12
+ },
+ {
+  "name": "Matias Davila",
+  "userName": "matias",
+  "fecha": "2021-05-16",
+  "domicilio": "racuh 1019",
+  "perfil": "comprar",
+  "password": "fdsafdsafasd",
+  "password2": "fdasfdsafdsa",
+  "file": "default.png",
+  "condition": 1,
+  "id": 13
  }
 ]

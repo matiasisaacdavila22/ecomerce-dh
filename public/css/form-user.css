@@ -1,0 +1,27 @@
+.main-register {
+    margin-left: 16px;
+    margin-top: 300px;
+  }
+
+.text-danger{
+    color: rgb(196, 14, 14);
+    font-size: 14px;
+}
+
+@media (min-width: 900px) {
+.header{
+    background-color: #EAC926;
+    padding: 20px;
+    padding-top: 30px;
+    position:absolute;
+    width: 100%;
+    height: 180px;
+    top: 0;
+    z-index: -10;
+  }
+  .main-register {
+    max-width: 1200px;
+    margin-top: 200px;
+  }
+
+}

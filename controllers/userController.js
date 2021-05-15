@@ -1,4 +1,5 @@
 const { render } = require('ejs');
+const { validationResult } = require('express-validator');
 let jsonDatabaseP = require('../model/jsonDatabase');
 let model = jsonDatabaseP('userDataBase')
 
@@ -6,22 +7,34 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const controller = {
     create: (req, res) => {
+		
         return res.render('user/register');
     },
 
-	store: (req, res) => {
-		console.log(req.body)
-		if(!req.body.file){
+	store: (req, res) => {	
+		let errors = validationResult(req);
+		if(errors.isEmpty()){
+		  if(!req.body.file){
 			req.body.file = 'default.png';
+		  }
+		  let userNew = req.body;	
+		  req.body.condition = 1;
+		  model.create(userNew);
+		  return res.render('user/login');
 		}
-		let userNew = req.body;	
-		req.body.condition = 1;
-		model.create(userNew);
-		return res.render('user/login');
+		return res.render('user/register', {errors: errors.mapped(), old:req.body});
 
 	},
 	login: (req, res) => {
-		return	res.render('user/login');
+			return	res.render('user/login');
+	},
+	loguear: (req, res) => {
+		let errors = validationResult(req);
+		console.log(errors)
+			if(errors.isEmpty()){
+			return	res.redirect('/product');
+			}
+		return res.render('user/login', {errors:errors.mapped()})
 	},
 
 	list: (req, res) => {
