@@ -16,8 +16,10 @@
             <form action="/user/register" method="POST" class="form-register" enctype="multipart/form-data">
                 <div class="control-form">
                     <label for="" class="titulo">Nombre y Apellido</label>
-                    <input type="text" name="name" placeholder="nombre apellido"
-                        value="<%= locals.old && old.name ? old.name : '' %>" class="control" minlength="3"
+                    <input type="text" name="name" 
+                        placeholder="nombre apellido"
+                        value="<%= locals.old && old.name ? old.name : '' %>"
+                        class="form-control <%= locals.errors && errors.name ? 'is-invalid' : '' %>" minlength="3"
                         maxlength="30">
                     <% if (locals.errors && errors.name){ %>
                         <div class="text-danger">
@@ -27,8 +29,11 @@
                 </div>
                 <div class="control-form">
                     <label for="" class="titulo">Usuario</label>
-                    <input type="text" name="userName" placeholder="usuario"
-                        value="<%= locals.old && old.userName ? old.userName : '' %>" class="control" minlength="3"
+                    <input type="text" name="userName" 
+                        placeholder="usuario"
+                        value="<%= locals.old && old.userName ? old.userName : '' %>"
+                        class="form-control <%= locals.errors && errors.name ? 'is-invalid' : '' %>"
+                         minlength="3"
                         maxlength="30">
                     <% if (locals.errors && errors.userName){ %>
                         <div class="text-danger">
@@ -57,10 +62,10 @@
                 </div>
                 <div class="control-form">
                     <label for="" class="titulo">Perfil de Usuario</label>
-                    <label><input type="radio" name="perfil" value="comprar" <%=locals.old && (old.perfil=="comprar" )
-                            ? "selected" : "" ; %> >Comprar</label>
-                    <label><input type="radio" name="perfil" value="vender" <%=locals.old && old.perfil==="vender"
-                            ? 'selected' : "" %> >Vender</label>
+                    <label><input type="radio" name="perfil" value="comprar" <%=locals.old && old.perfil =="comprar" 
+                            ? "checked" : "" ; %> >Comprar</label>
+                    <label><input type="radio" name="perfil" value="vender" <%=locals.old && old.perfil =="vender"
+                            ? 'checked' : "" %> >Vender</label>
                     <% if (locals.errors && errors.perfil){ %>
                         <div class="text-danger">
                             <%= errors.perfil.msg %>
@@ -69,16 +74,16 @@
                 </div>
                 <div class="categorias">
                     <label for="" class="titulo">Intereses</label>
-                    <label><input type="checkbox" name="categorias" value="electro" <%=locals.old &&
-                            old.categorias==='electro' ? selected : '' %>>Electro</label>
-                    <label><input type="checkbox" name="categorias" value="moda" <%=locals.old &&
-                            old.categorias==='moda' ? selected : '' %>>Moda</label>
-                    <label><input type="checkbox" name="categorias" value="hogar" <%=locals.old &&
-                            old.categorias==='hogar' ? selected : '' %>>Hogar</label>
-                    <label><input type="checkbox" name="categorias" value="jugueteria" <%=locals.old &&
-                            old.categorias==='jugueteria' ? selected : '' %>>Jugueteria</label>
-                    <label><input type="checkbox" name="categorias" value="vidaSana" <%=locals.old &&
-                            old.categorias==='vidaSana' ? selected : '' %>>Vida Sana</label>
+                    <label><input type="checkbox" name="categorias" 
+                            value="electro" <%=locals.old && old.categorias && old.categorias.includes('electro') ? 'checked' : '' %>>Electro</label>
+                    <label><input type="checkbox" name="categorias"
+                            value="moda" <%=locals.old && old.categorias && old.categorias.includes('moda') ? 'checked' : '' %>>Moda</label>
+                    <label><input type="checkbox" name="categorias" 
+                            value="hogar" <%=locals.old && old.categorias && old.categorias.includes('hogar') ? 'checked' : '' %>>Hogar</label>
+                    <label><input type="checkbox" name="categorias"
+                         value="jugueteria" <%=locals.old && old.categorias && old.categorias.includes('jugueteria') ? 'checked' : '' %>>Jugueteria</label>
+                    <label><input type="checkbox" name="categorias" 
+                        value="vidaSana" <%=locals.old && old.categorias && old.categorias.includes('vidaSana') ? 'checked' : '' %>>Vida Sana</label>
                 </div>
                 <div class="control-form">
                     <label for="" class="titulo">Foto de Perfil</label>
