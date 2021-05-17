@@ -50,7 +50,7 @@ const controller = {
 		 productUpdate.file = req.file.filename;
 		}
 		if(!req.file){
-			productUpdate.file = req.body.oldFile;
+			productUpdate.file = model.find(req.params.id).file;
 		}
 	
 		console.log(productUpdate)

@@ -1,12 +1,12 @@
 [
  {
-  "category": "1",
-  "name": "karina",
-  "description": "trewtrewtrewt",
-  "stock": "32",
-  "price": "43",
+  "category": "2",
+  "name": "karina delass",
+  "description": "jjhgfjfhgj",
+  "stock": "14",
+  "price": "14",
   "id": "1",
-  "file": "product-1621218852630.jpg"
+  "file": "product1621265216685.jpg"
  },
  {
   "category": "1",
@@ -15,7 +15,7 @@
   "stock": "2",
   "price": "500",
   "id": "2",
-  "file": "product-1621218899632.jpg"
+  "file": "product1621265224463.jpg"
  },
  {
   "category": "1",

@@ -5,6 +5,7 @@ const userRouter = require('./routes/userRouter.js');
 const productRouter = require('./routes/productRouter.js');
 const methodOverride = require('method-override');
 
+
 app.set('view engine', 'ejs');
 
 const path = require('path');

@@ -4,6 +4,8 @@ const router = express.Router();
 let multer = require('multer');
 let logDBMiddleware = require('../middlewares/logDBMiddleware');
 const { body } = require('express-validator');
+const userController = require('../controllers/userController');
+const getMulterStorageConfig = require('../middlewares/multerMiddleware');
 
 const validetUserCreate = [
     body('name').notEmpty().withMessage('Ingresa tu Nombre!'), 
@@ -34,18 +36,10 @@ const validetUserLogin = [
     body('password').notEmpty().withMessage('coloca tu clave') 
 ];
 
-const userController = require('../controllers/userController');
 
-let storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, path.join(__dirname, '../public/images/user'));
-    },
-    filename: (req, file, cb) => {
-        let newFileName = 'user-'+Date.now() + path.extname(file.originalname);
-        req.body.file = newFileName;
-        cb(null, newFileName);
-    }
-});
+
+let storage = getMulterStorageConfig('../public/images/user','user')
+
 
 let upload = multer({storage: storage});
 

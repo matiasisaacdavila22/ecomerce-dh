@@ -205,5 +205,105 @@
   "file": "default.png",
   "condition": 1,
   "id": 15
+ },
+ {
+  "name": "matias",
+  "userName": "fdas",
+  "fecha": "2021-05-06",
+  "domicilio": "racuh 1019",
+  "perfil": "comprar",
+  "categorias": [
+   "moda",
+   "jugueteria",
+   "vidaSana"
+  ],
+  "password": "fdsafdsafdsa",
+  "password2": "fdsafdsafdsa",
+  "file": "default.png",
+  "condition": 1,
+  "id": 16
+ },
+ {
+  "name": "karina",
+  "userName": "dddddddddddddddddddddddddddddd",
+  "fecha": "2021-05-28",
+  "domicilio": "rauch1019",
+  "perfil": "comprar",
+  "categorias": [
+   "electro",
+   "hogar",
+   "jugueteria",
+   "vidaSana"
+  ],
+  "password": "123456789",
+  "password2": "123456789",
+  "file": "default.png",
+  "condition": 1,
+  "id": 17
+ },
+ {
+  "name": "checa checa",
+  "userName": "checa checa",
+  "fecha": "2021-05-06",
+  "domicilio": "checa checa",
+  "perfil": "comprar",
+  "categorias": [
+   "electro",
+   "hogar",
+   "vidaSana"
+  ],
+  "password": "123456789",
+  "password2": "123456789",
+  "condition": 1,
+  "id": 18
+ },
+ {
+  "name": "checa checa2",
+  "userName": "checa checa2",
+  "fecha": "2021-05-15",
+  "domicilio": "checa checa2",
+  "perfil": "vender",
+  "categorias": [
+   "moda",
+   "hogar",
+   "vidaSana"
+  ],
+  "password": "checa checa2",
+  "password2": "checa checa2",
+  "condition": 1,
+  "file": "user1621266835843.jpg",
+  "id": 19
+ },
+ {
+  "name": "karina",
+  "userName": "marte",
+  "fecha": "2021-04-29",
+  "domicilio": "rauch 1919",
+  "perfil": "comprar",
+  "categorias": [
+   "hogar",
+   "vidaSana"
+  ],
+  "password": "checa checa2",
+  "password2": "checa checa2",
+  "condition": 1,
+  "file": "default.png",
+  "id": 20
+ },
+ {
+  "name": "checa checa23",
+  "userName": "checa checa23",
+  "fecha": "2021-05-06",
+  "domicilio": "checa checa23",
+  "perfil": "comprar",
+  "categorias": [
+   "hogar",
+   "vidaSana"
+  ],
+  "password": "checa checa2",
+  "password2": "checa checa2",
+  "condition": 1,
+  "file": "user1621267015769.jpg",
+  "id": 21
  }
 ]

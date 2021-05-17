@@ -23,39 +23,69 @@
                                 <img src="/images/product/<%= product.file %>" alt="<%=product.name %>" class="detail-product_img">
                                 <input type="file" name="file" value="<%=product.file %>">
                                 <input type="hidden" name="oldFile" value="<%=locals.product ? product.file:'0' %>">
+                                <% if (locals.errors && errors.file){ %>
+                                    <div class="text-danger">
+                                        <%= errors.file.msg %>
+                                    </div>
+                                    <% } %>
                             </div>
                             <div class="setction">
                                 <div class="product-create-category">
                                     <h2>Categoria</h2>
                                     <select class="product-form-select" name="category" id="category">
                                         <option selected value="0">Selecciona una categoria</option>
-                                        <option value="1">Electro</option>
-                                        <option value="2">Jardin</option>
-                                        <option value="3">VidaSaludable</option>
-                                        <option value="3">Computadoras</option>
-                                        <option value="3">Maquinas y herramientas</option>
+                                        <option value="1" <%=locals.old && old.category=='1' ? 'selected' : '' %>>Electro</option>
+                                        <option value="2" <%=locals.old && old.category=='2' ? 'selected' : '' %>>Jardin</option>
+                                        <option value="3" <%=locals.old && old.category=='3' ? 'selected' : '' %>>VidaSaludable</option>
+                                        <option value="4" <%=locals.old && old.category=='4' ? 'selected' : '' %>>Computadoras</option>
+                                        <option value="5" <%=locals.old && old.category=='5' ? 'selected' : '' %>>Maquinas y herramientas</option>
                                     </select>
+                                    <% if (locals.errors && errors.category){ %>
+                                        <div class="text-danger">
+                                            <%= errors.category.msg %>
+                                        </div>
+                                        <% } %>
                                 </div>
                                 <div class="product-create-name">
                                     <h2>Nombre</h2>
                                     <input type="text" name="name" placeholder="Nombre"  maxlength="30"
                                         value="<%=product.name %>">
+                                        <% if (locals.errors && errors.name){ %>
+                                            <div class="text-danger">
+                                                <%= errors.name.msg %>
+                                            </div>
+                                            <% } %>
                                 </div>
                                 <div class="product-create-descripcion">
                                     <h2>Descripcion</h2>
                                     <textarea name="description" id="descripction" cols="30"
                                         rows="10"><%=product.description %></textarea>
+                                        <% if (locals.errors && errors.description){ %>
+                                            <div class="text-danger">
+                                                <%= errors.description.msg %>
+                                            </div>
+                                            <% } %>
                                 </div>
                                 <div class="product-create-row">
                                     <div class="product-create-stock">
                                         <h2>Stock:</h2>
                                         <input type="number" name="stock" class="edit-stock" 
                                             maxlength="6" value="<%=product.stock %>">
+                                            <% if (locals.errors && errors.stock){ %>
+                                                <div class="text-danger">
+                                                    <%= errors.stock.msg %>
+                                                </div>
+                                                <% } %>
                                     </div>
                                     <div class="product-create-price">
                                         <h2>Precio:</h2>
                                         <input type='text' name="price"  placeholder="$" maxlength="6"
                                             value="<%=product.price %>">
+                                            <% if (locals.errors && errors.price){ %>
+                                                <div class="text-danger">
+                                                    <%= errors.price.msg %>
+                                                </div>
+                                                <% } %>
                                     </div>
                                 </div>
                                 <div class="btns">

@@ -4,23 +4,14 @@ const multer = require("multer");
 const path = require("path");
 const { body } = require("express-validator");
 const productsController = require("../controllers/productsController");
+const getMulterStorageConfig = require('../middlewares/multerMiddleware');
 
 const productValidation = [
   body("category").not().isIn("0").withMessage("Selecciona una Categoria"),
   body("name").notEmpty().withMessage("ingresar el Nombre del producto"),
   body("description").notEmpty().withMessage("agrega una descripcion"),
-  body("stock")
-    .notEmpty()
-    .withMessage("introduce la cantidad")
-    .bail()
-    .isNumeric()
-    .withMessage("este campo deve ser un Numero"),
-  body("price")
-    .notEmpty()
-    .withMessage("indicar el precio $")
-    .bail()
-    .isNumeric()
-    .withMessage("este campo deve ser un Numero"),
+  body("stock").notEmpty().withMessage("introduce la cantidad").bail().isNumeric().withMessage("este campo deve ser un Numero"),
+  body("price").notEmpty().withMessage("indicar el precio $").bail().isNumeric().withMessage("este campo deve ser un Numero"),
   body("file").custom((value, { req }) => {
     let acceptedExtensions = [".jpg", ".npg", ".gif"];
     if (!req.file) {
@@ -43,18 +34,10 @@ const productValidation = [
   }),
 ];
 
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, path.join(__dirname, "../public/images/product"));
-  },
-  filename: (req, file, cb) => {
-    const newFileName =
-      "product-" + Date.now() + path.extname(file.originalname);
-    cb(null, newFileName);
-  },
-});
 
-const upload = multer({ storage: storage });
+let getstorage = getMulterStorageConfig('../public/images/product','product');
+
+const upload = multer({ storage: getstorage, limits: 1024 * 1024 });
 
 router.get("/", productsController.index);
 

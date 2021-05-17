@@ -14,8 +14,12 @@ const controller = {
 	store: (req, res) => {	
 		let errors = validationResult(req);
 		if(errors.isEmpty()){
-		  if(!req.body.file){
+			req.body.condition = 1;
+		  if(!req.file){
 			req.body.file = 'default.png';
+		  }
+		  if(req.file){
+			req.body.file = req.file.filename;
 		  }
 		  let userNew = req.body;	
 		  req.body.condition = 1;
@@ -53,15 +57,22 @@ const controller = {
 	},
 
 	update: (req, res) => {
-
+		let errors = validationResult(req);
 		let userUpdate = req.body;
         userUpdate.id = req.params.id;
-        if(!userUpdate.image){
-            userUpdate.image = model.find(req.params.id).image;
+		if(req.file){
+			userUpdate.file = req.file.filename;
+		}
+        if(!req.file){
+            userUpdate.file = model.find(req.params.id).file;
         }
         console.log(userUpdate);
-        model.update(userUpdate);
-        return res.redirect('home');
+		if(errors.isEmpty()){
+			model.update(userUpdate);
+			return res.redirect('home');
+		}
+		console.log(errors)
+			return res.render(`user/editUser`, {errors: errors.mapped(), 'user':userUpdate});	
 	},
 
 	delete : (req, res) => {
