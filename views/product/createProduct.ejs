@@ -2,7 +2,8 @@
 <html lang="en">
 
 <%- include('../partials/head')%>
-<link rel='stylesheet' href='/css/form-product.css' />
+    <link rel='stylesheet' href='/css/form-product.css' />
+
     <body>
         <%- include('../partials/header')%>
             <main>
@@ -20,36 +21,76 @@
                             </div>
                             <div class="product-create-file">
                                 <h2>Imagen</h2>
-                                <input type="file" name="file">
+                                <input type="file" name="file" value="">
+                                <% if (locals.errors && errors.file){ %>
+                                    <div class="text-danger">
+                                        <%= errors.file.msg %>
+                                    </div>
+                                    <% } %>
                             </div>
                             <div class="setction">
                                 <div class="product-create-category">
                                     <h2>Categoria</h2>
                                     <select class="product-form-select" name="category">
-                                        <option selected>Selecciona una categoria</option>
-                                        <option value="1">Electro</option>
-                                        <option value="2">Jardin</option>
-                                        <option value="3">VidaSaludable</option>
-                                        <option value="3">Computadoras</option>
-                                        <option value="3">Maquinas y herramientas</option>
+                                        <option value="0" selected>Selecciona una categoria</option>
+                                        <option value="1" <%=locals.old && old.category=='1' ? 'selected' : '' %>
+                                            >Electro</option>
+                                        <option value="2" <%=locals.old && old.category=='2' ? 'selected' : '' %>>Jardin
+                                        </option>
+                                        <option value="3" <%=locals.old && old.category=='3' ? 'selected' : '' %>
+                                            >VidaSaludable</option>
+                                        <option value="4" <%=locals.old && old.category=='4' ? 'selected' : '' %>
+                                            >Computadoras</option>
+                                        <option value="5" <%=locals.old && old.category=='6' ? 'selected' : '' %>
+                                            >Maquinas y herramientas</option>
                                     </select>
+                                    <% if (locals.errors && errors.category){ %>
+                                        <div class="text-danger">
+                                            <%= errors.category.msg %>
+                                        </div>
+                                        <% } %>
                                 </div>
                                 <div class="product-create-name">
                                     <h2>Nombre</h2>
-                                    <input type="text" name="name" placeholder="Nombre" required maxlength="30">
+                                    <input type="text" name="name" value="<%= locals.old && old.name ? old.name : '' %>"
+                                        placeholder="Nombre" maxlength="30">
+                                    <% if (locals.errors && errors.name){ %>
+                                        <div class="text-danger">
+                                            <%= errors.name.msg %>
+                                        </div>
+                                        <% } %>
                                 </div>
                                 <div class="product-create-descripcion">
                                     <h2>Descripcion</h2>
-                                    <textarea name="description" id="descripction" cols="30" rows="10"></textarea>
+                                    <textarea name="description" id="descripction" cols="30"
+                                        rows="10"><%= locals.old && old.description ? old.description : '' %></textarea>
+                                    <% if (locals.errors && errors.description){ %>
+                                        <div class="text-danger">
+                                            <%= errors.description.msg %>
+                                        </div>
+                                        <% } %>
                                 </div>
                                 <div class="product-create-row">
                                     <div class="product-create-stock">
                                         <h2>Stock:</h2>
-                                        <input type="number" value="1"  name="stock" class="edit-stock" required maxlength="6">
+                                        <input type="number" value="<%= locals.old && old.stock ? old.stock : '1' %>"
+                                            name="stock" class="edit-stock" maxlength="6">
+                                        <% if (locals.errors && errors.stock){ %>
+                                            <div class="text-danger">
+                                                <%= errors.stock.msg %>
+                                            </div>
+                                            <% } %>
                                     </div>
                                     <div class="product-create-price">
                                         <h2>Precio:</h2>
-                                        <input type='text' name="price" required placeholder="$" maxlength="6">
+                                        <input type='number' name="price"
+                                            value="<%= locals.old && old.price ? old.price : '' %>" placeholder="$"
+                                            maxlength="6">
+                                        <% if (locals.errors && errors.price){ %>
+                                            <div class="text-danger">
+                                                <%= errors.price.msg %>
+                                            </div>
+                                            <% } %>
                                     </div>
                                 </div>
                                 <div class="btns">

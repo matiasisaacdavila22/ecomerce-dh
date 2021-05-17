@@ -22,12 +22,13 @@
                                 <h2>Imagen</h2>
                                 <img src="/images/product/<%= product.file %>" alt="<%=product.name %>" class="detail-product_img">
                                 <input type="file" name="file" value="<%=product.file %>">
+                                <input type="hidden" name="oldFile" value="<%=locals.product ? product.file:'0' %>">
                             </div>
                             <div class="setction">
                                 <div class="product-create-category">
                                     <h2>Categoria</h2>
                                     <select class="product-form-select" name="category" id="category">
-                                        <option selected>Selecciona una categoria</option>
+                                        <option selected value="0">Selecciona una categoria</option>
                                         <option value="1">Electro</option>
                                         <option value="2">Jardin</option>
                                         <option value="3">VidaSaludable</option>
@@ -37,7 +38,7 @@
                                 </div>
                                 <div class="product-create-name">
                                     <h2>Nombre</h2>
-                                    <input type="text" name="name" placeholder="Nombre" required maxlength="30"
+                                    <input type="text" name="name" placeholder="Nombre"  maxlength="30"
                                         value="<%=product.name %>">
                                 </div>
                                 <div class="product-create-descripcion">
@@ -48,12 +49,12 @@
                                 <div class="product-create-row">
                                     <div class="product-create-stock">
                                         <h2>Stock:</h2>
-                                        <input type="number" name="stock" class="edit-stock" required
+                                        <input type="number" name="stock" class="edit-stock" 
                                             maxlength="6" value="<%=product.stock %>">
                                     </div>
                                     <div class="product-create-price">
                                         <h2>Precio:</h2>
-                                        <input type='text' name="price" required placeholder="$" maxlength="6"
+                                        <input type='text' name="price"  placeholder="$" maxlength="6"
                                             value="<%=product.price %>">
                                     </div>
                                 </div>

@@ -10,10 +10,24 @@ const validetUserCreate = [
     body('userName').notEmpty().withMessage('Completa con tu Nombre de Usuario!'), 
     body('fecha').notEmpty().withMessage('Ingresa una Fecha!'), 
     body('domicilio').notEmpty().withMessage('Completa con tu Direccion!'), 
-    body('password').notEmpty().withMessage('coloca una clave mayor a 8 digitos pueden ser numero y letras!'), 
-    body('password2').notEmpty().withMessage('vuelve a introducir tu Clave!')
-   // body('perfil').notEmpty().withMessage('selecciona tu perfil de Usuario')
-];
+    body('password').isLength({ min: 8 }).withMessage('coloca una clave mayor a 8 digitos pueden ser numero y letras!'), 
+    body('password2').custom((value, {req}) => {
+		if(!req.body.password){
+            throw new Error('ingresa una clave');
+        }
+        if(!req.body.password2){
+            throw new Error('repite tu clave');
+        }
+        let password = req.body.password;
+        let password2 = req.body.password2;
+
+        if(password != password2){
+			throw new Error('Error las claves ingresadas son Distintas');
+		}
+		return true;
+        
+	})
+ ];
 
 const validetUserLogin = [
     body('userName').notEmpty().withMessage('Ingreasa con tu Nombre de Usuario!'), 

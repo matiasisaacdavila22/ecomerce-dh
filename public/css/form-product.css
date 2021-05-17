@@ -226,6 +226,13 @@
     border: 0.5px solid rgb(17, 17, 17);
     color: rgb(206, 0, 0);  
   }
+
+  /**************star-validaciones************/
+  .text-danger{
+    color: rgb(196, 14, 14);
+    font-size: 14px;
+}
+   /**************end-validaciones************/
   
   .footer {
     height: 200px;

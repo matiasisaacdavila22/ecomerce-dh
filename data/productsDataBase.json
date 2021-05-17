@@ -1,12 +1,12 @@
 [
  {
-  "category": "3",
-  "name": "pantalla led 70\"",
-  "description": "vdsafdsaf",
-  "stock": "45",
-  "price": "444",
+  "category": "1",
+  "name": "karina",
+  "description": "trewtrewtrewt",
+  "stock": "32",
+  "price": "43",
   "id": "1",
-  "file": "product-1620855481386.jpg"
+  "file": "product-1621218852630.jpg"
  },
  {
   "category": "1",
@@ -15,7 +15,7 @@
   "stock": "2",
   "price": "500",
   "id": "2",
-  "file": "img-macbook-pro-2019.jpg"
+  "file": "product-1621218899632.jpg"
  },
  {
   "category": "1",
@@ -24,7 +24,7 @@
   "stock": "2",
   "price": "72999",
   "id": "3",
-  "file": "img-samsung-galaxy-s10.jpg"
+  "file": "product-1621218910477.jpg"
  },
  {
   "category": "1",
@@ -33,7 +33,7 @@
   "stock": "2",
   "price": "47900",
   "id": "4",
-  "file": "img-heladera-whirpool.jpg"
+  "file": "product-1621218919884.jpg"
  },
  {
   "category": "1",
@@ -42,7 +42,7 @@
   "stock": "43",
   "price": "450",
   "id": "5",
-  "file": "product-1620855239311.jpg"
+  "file": "product-1621218931524.jpg"
  },
  {
   "category": "3",
@@ -51,7 +51,7 @@
   "stock": "2",
   "price": "20999",
   "id": "6",
-  "file": "img-aire-acondicionado.jpg"
+  "file": "product-1621218948195.jpg"
  },
  {
   "category": "1",
@@ -60,17 +60,17 @@
   "stock": "2",
   "price": "36700",
   "id": "7",
-  "file": "img-laptop-lenovo.jpg"
+  "file": "product-1621218961729.jpg"
  },
  {
-  "id": 8,
+  "oldFile": "img-iphone-11.jpg",
+  "category": "2",
   "name": "Apple iPhone 11 Pro Dual SIM 256 GB",
   "description": "¡El nuevo smartphone que lo tiene todo! Con este lanzamiento, Apple ha superado todos sus récords. Su diseño se destaca por sus líneas finas y distinguidas a partir de una sola hoja de vidrio resistente, combinada con aluminio de excelente calidad.",
-  "price": 148000,
-  "discount": 2,
-  "file": "img-iphone-11.jpg",
-  "category": "2",
-  "stock": 2
+  "stock": "2",
+  "price": "148000",
+  "id": "8",
+  "file": "img-iphone-11.jpg"
  },
  {
   "category": "3",
@@ -150,6 +150,7 @@
   "stock": 2
  },
  {
+  "oldFile": "product-1620939160004.jpg",
   "category": "3",
   "name": "matias davila",
   "description": "wqwqwq matias",
@@ -157,5 +158,14 @@
   "price": "450",
   "id": "17",
   "file": "product-1620939160004.jpg"
+ },
+ {
+  "category": "1",
+  "name": "karina",
+  "description": "dfdsafsdfa",
+  "stock": "13",
+  "price": "566",
+  "id": "18",
+  "file": "product-1621219018228.jpg"
  }
 ]

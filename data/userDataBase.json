@@ -170,5 +170,40 @@
   "file": "default.png",
   "condition": 1,
   "id": 13
+ },
+ {
+  "name": "karina",
+  "userName": "marte",
+  "fecha": "2021-05-13",
+  "domicilio": "rauch1019",
+  "perfil": "vender",
+  "categorias": [
+   "moda",
+   "jugueteria",
+   "vidaSana"
+  ],
+  "password": "12235612",
+  "password2": "",
+  "file": "default.png",
+  "condition": 1,
+  "id": 14
+ },
+ {
+  "name": "matias",
+  "userName": "dddddddddddddddddddddddddddddd",
+  "fecha": "2021-05-01",
+  "domicilio": "rauch 1919",
+  "perfil": "comprar",
+  "categorias": [
+   "electro",
+   "moda",
+   "hogar",
+   "jugueteria"
+  ],
+  "password": "123123123",
+  "password2": "123123123",
+  "file": "default.png",
+  "condition": 1,
+  "id": 15
  }
 ]
