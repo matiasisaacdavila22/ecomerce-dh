@@ -4,13 +4,12 @@ const rutasMain = require('./routes/mainRouter.js');
 const userRouter = require('./routes/userRouter.js');
 const productRouter = require('./routes/productRouter.js');
 const methodOverride = require('method-override');
-
+const session = require('express-session');
+const path = require('path');
+const puerto = process.env.PORT ;
 
 app.set('view engine', 'ejs');
-
-const path = require('path');
-
-const puerto = process.env.PORT ;
+app.use(session({secret:'secreto'}));
  
 app.use(express.static('./public'));
 app.use(express.urlencoded({ extended: false}));

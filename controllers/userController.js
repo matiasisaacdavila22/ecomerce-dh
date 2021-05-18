@@ -36,11 +36,33 @@ const controller = {
 		let errors = validationResult(req);
 		console.log(errors)
 			if(errors.isEmpty()){
-			return	res.redirect('/product');
-			}
-		return res.render('user/login', {errors:errors.mapped()})
-	},
+				usuerLoguear = model.findemail(req.body.userName);
+				if(usuerLoguear){
+					userpasswordLoguear = req.body.password;
+					if(userpasswordLoguear == usuerLoguear.password){
+						req.session.userLogueado = usuerLoguear;
+						return	res.redirect('/product');
+					}
+					let	error = {
+					        	msg:'Usuario o passware Incorrecto!!'
+					            }
+						
 
+					return res.render('user/login', {error:error})
+						
+
+					}
+						let	error = {
+							msg:'Usuario o passware Incorrecto!!'
+							}
+
+						return res.render('user/login', {error:error})
+					
+				}
+				return res.render('user/login', {errors:errors.mapped()})
+		
+	},
+	
 	list: (req, res) => {
 		let users = model.all();
 		return res.render('user/userList', {users:users});

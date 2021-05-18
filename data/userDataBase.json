@@ -27,6 +27,7 @@
    "vidaSana"
   ],
   "password": "admin123",
+  "email": "mipcomputacion@gmail.com",
   "id": 2
  },
  {
@@ -305,5 +306,22 @@
   "condition": 1,
   "file": "user1621267015769.jpg",
   "id": 21
- }
+ },
+ {
+    "name": "admin",
+    "userName": "admin",
+    "fecha": "2021-05-06",
+    "domicilio": "checa checa23",
+    "perfil": "comprar",
+    "categorias": [
+     "hogar",
+     "vidaSana"
+    ],
+    "password": "admin",
+    "password2": "admin",
+    "condition": 1,
+    "file": "user1621267015769.jpg",
+    "email":"admin",
+    "id": 22
+   }
 ]

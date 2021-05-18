@@ -19,7 +19,7 @@
                     <input type="text" name="name" 
                         placeholder="nombre apellido"
                         value="<%= locals.old && old.name ? old.name : '' %>"
-                        class="form-control <%= locals.errors && errors.name ? 'is-invalid' : '' %>" minlength="3"
+                        minlength="3"
                         maxlength="30">
                     <% if (locals.errors && errors.name){ %>
                         <div class="text-danger">
@@ -32,12 +32,24 @@
                     <input type="text" name="userName" 
                         placeholder="usuario"
                         value="<%= locals.old && old.userName ? old.userName : '' %>"
-                        class="form-control <%= locals.errors && errors.name ? 'is-invalid' : '' %>"
                          minlength="3"
                         maxlength="30">
                     <% if (locals.errors && errors.userName){ %>
                         <div class="text-danger">
                             <%= errors.userName.msg %>
+                        </div>
+                        <% } %>
+                </div>
+                <div class="control-form">
+                    <label for="" class="titulo">Email</label>
+                    <input type="email" name="email" 
+                        placeholder="example@email"
+                        value="<%= locals.old && old.email ? old.email : '' %>"
+                        minlength="3"
+                        maxlength="30">
+                    <% if (locals.errors && errors.email){ %>
+                        <div class="text-danger">
+                            <%= errors.email.msg %>
                         </div>
                         <% } %>
                 </div>
