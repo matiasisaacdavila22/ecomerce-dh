@@ -25,6 +25,7 @@ const controller = {
 		if(errors.isEmpty()){
 			req.body.condition = 1;
 			let productNew = req.body; 	
+			productNew.file = req.file.filename;
 		     model.create(productNew);
 			return res.redirect('/product');
 		}

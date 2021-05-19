@@ -3,7 +3,7 @@ function guestMiddleware(req, res, next){
         next();
     }else{
         req.session.userLogueado = undefined;
-        res.send(`ya estas logueado, seras desautenticado para que puedas reingresar....<br> <h2>Regarga la Pagina!</h2>`)
+        res.send(`estas logueado no puedes volver a hacerlo....<br> <h2><a href="../../product">Productos</a></h2><br> <h2><a href="../../">Home</a></h2>`)
 
       // return res.redirect('/');
     }

@@ -167,5 +167,33 @@
   "price": "566",
   "id": "18",
   "file": "product-1621219018228.jpg"
+ },
+ {
+  "category": "2",
+  "name": "karina delass",
+  "description": "csaadsfdasf",
+  "stock": "1",
+  "price": "43",
+  "id": "19",
+  "file": "product1621385707830.jpg"
+ },
+ {
+  "category": "2",
+  "name": "matias",
+  "description": "fgsafdsaf",
+  "stock": "1",
+  "price": "444",
+  "id": "20",
+  "file": "product1621385935155.jpg"
+ },
+ {
+  "category": "4",
+  "name": "dell i7",
+  "description": "computadora personal altamente comppletamente",
+  "stock": "1",
+  "price": "150000",
+  "condition": 1,
+  "file": "product1621385967408.jpg",
+  "id": 21
  }
 ]
