@@ -1,11 +1,20 @@
 const { body } = require('express-validator');
 const path = require('path');
-
+let jsonDatabaseP = require('../model/jsonDatabase');
+let model = jsonDatabaseP('userDataBase')
         
 const validations = {
     validetUserCreate : [
     body('name').notEmpty().withMessage('Ingresa tu Nombre!'), 
     body('userName').notEmpty().withMessage('Completa con tu Nombre de Usuario!'), 
+    body('email').isEmail().withMessage('debes ingresar un Email Valido').bail().custom((value, {req}) => {
+      let email = req.body.email;
+      let userfind = model.findemail(email);
+      if(userfind){
+        throw new Error('Ya existe un Usuarion con este Email!');
+      }
+      return true;
+    }), 
     body('fecha').notEmpty().withMessage('Ingresa una Fecha!'), 
     body('domicilio').notEmpty().withMessage('Completa con tu Direccion!'), 
     body('password').isLength({ min: 8 }).withMessage('coloca una clave mayor a 8 digitos pueden ser numero y letras!'), 

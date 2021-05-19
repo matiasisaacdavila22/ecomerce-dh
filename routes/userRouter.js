@@ -16,6 +16,7 @@ router.get('/register', guestMiddleware, userController.create);
 router.post('/register', logDBMiddleware, upload.single('file'), validations.validetUserCreate, userController.store); 
 
 router.get('/login', guestMiddleware, userController.login); 
+router.get('/logout', userController.logout); 
 router.post('/loguear',validations.validetUserLogin, userController.loguear)
 
 router.get('/', authMiddleware, userController.list); 

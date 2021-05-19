@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const authCookieMiddleware = require('./middlewares/authCookieMiddleware');
 const rutasMain = require('./routes/mainRouter.js');
 const userRouter = require('./routes/userRouter.js');
 const productRouter = require('./routes/productRouter.js');
@@ -9,16 +8,22 @@ const session = require('express-session');
 const path = require('path');
 const puerto = process.env.PORT ;
 const cookieParser = require('cookie-parser');
+const userLoggertMiddleware = require('./middlewares/userLoggertMiddleware');
+
 
 app.set('view engine', 'ejs');
-app.use(session({secret:'secreto'}));
+app.use(session({
+    secret:'secreto',
+    resave: false,
+    saveUninitialized:false
+    }));
 app.use(cookieParser());
+app.use(userLoggertMiddleware);
 app.use(express.static('./public'));
 app.use(express.urlencoded({ extended: false}));
 app.use(express.json());
 app.use(methodOverride("_method"));
 
-app.use(authCookieMiddleware);
 app.use('/', rutasMain);
 app.use('/user', userRouter);
 app.use('/product', productRouter);

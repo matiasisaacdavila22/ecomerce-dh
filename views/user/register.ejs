@@ -17,7 +17,7 @@
                 <div class="control-form">
                     <label for="" class="titulo">Nombre y Apellido</label>
                     <input type="text" name="name" 
-                        placeholder="nombre apellido"
+                        placeholder="nombre apellido" class="control"
                         value="<%= locals.old && old.name ? old.name : '' %>"
                         minlength="3"
                         maxlength="30">
@@ -30,7 +30,7 @@
                 <div class="control-form">
                     <label for="" class="titulo">Usuario</label>
                     <input type="text" name="userName" 
-                        placeholder="usuario"
+                        placeholder="usuario" class="control"
                         value="<%= locals.old && old.userName ? old.userName : '' %>"
                          minlength="3"
                         maxlength="30">
@@ -43,7 +43,7 @@
                 <div class="control-form">
                     <label for="" class="titulo">Email</label>
                     <input type="email" name="email" 
-                        placeholder="example@email"
+                        placeholder="example@email" class="control"
                         value="<%= locals.old && old.email ? old.email : '' %>"
                         minlength="3"
                         maxlength="30">
@@ -55,7 +55,7 @@
                 </div>
                 <div class="control-form">
                     <label for="" class="titulo">Feche de Nacimiento</label>
-                    <input type="date" name="fecha" value="<%= locals.old && old.fecha ? old.fecha : '' %>">
+                    <input type="date" name="fecha" value="<%= locals.old && old.fecha ? old.fecha : '' %>" class="control">
                     <% if (locals.errors && errors.fecha){ %>
                         <div class="text-danger">
                             <%= errors.fecha.msg %>
@@ -64,7 +64,7 @@
                 </div>
                 <div class="control-form">
                     <label for="" class="titulo">Domicilio</label>
-                    <input type="text" name="domicilio" placeholder="rauch 1019"
+                    <input type="text" name="domicilio" placeholder="rauch 1019" class="control"
                         value="<%= locals.old && old.domicilio ? old.domicilio : '' %>" class="control" maxlength="30">
                     <% if (locals.errors && errors.domicilio){ %>
                         <div class="text-danger">

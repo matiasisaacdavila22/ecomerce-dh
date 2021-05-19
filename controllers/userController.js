@@ -2,6 +2,7 @@ const { render } = require('ejs');
 const { validationResult } = require('express-validator');
 let jsonDatabaseP = require('../model/jsonDatabase');
 let model = jsonDatabaseP('userDataBase')
+const bcrypt = require('bcryptjs');
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
@@ -21,8 +22,11 @@ const controller = {
 		  if(req.file){
 			req.body.file = req.file.filename;
 		  }
-		  let userNew = req.body;	
-		  req.body.condition = 1;
+		  let userNew = {
+			  ...req.body,	
+		   condition: 1,
+		   password : bcrypt.hashSync(req.body.password, 10)
+		  }
 		  model.create(userNew);
 		  return res.render('user/login');
 		}
@@ -36,13 +40,14 @@ const controller = {
 		let errors = validationResult(req);
 		console.log(errors)
 			if(errors.isEmpty()){
-				usuerLoguear = model.findemail(req.body.userName);
-				if(usuerLoguear){
-					userpasswordLoguear = req.body.password;
-					if(userpasswordLoguear == usuerLoguear.password){
-						req.session.userLogueado = usuerLoguear;
+				userLoguear = model.findemail(req.body.userName);
+				if(userLoguear){
+					password = req.body.password;
+					if(bcrypt.compareSync(password, userLoguear.password)){
+						delete userLoguear.password;
+						req.session.userLogueado = userLoguear;
 						if(req.body.remember != undefined){
-							res.cookie('remember', usuerLoguear.email, {maxAge: 300000 })
+							res.cookie('userEmail', userLoguear.email, {maxAge: (100 * 60)*10 })
 						}
 						return	res.redirect('/product');
 					}else{
@@ -62,6 +67,12 @@ const controller = {
 				return res.render('user/login', {errors:errors.mapped()})
 		
 	},
+
+	logout: (req, res) => {
+		res.clearCookie('userEmail');
+		req.session.destroy();
+		return	res.redirect('/');
+    },
 	
 	list: (req, res) => {
 		let users = model.all();

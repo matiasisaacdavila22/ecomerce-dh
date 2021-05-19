@@ -2,7 +2,8 @@
  {
   "id": 1,
   "name": "Matias Davila",
-  "userName": "matias",
+  "userName": "admin",
+  "email": "admin",
   "fecha": "2021-05-12",
   "domicilio": "racuh 1019",
   "perfil": "comprar",
@@ -11,317 +12,65 @@
    "hogar",
    "vidaSana"
   ],
-  "password": "admin123",
+  "password": "$2a$10$8WdCfaLLbl6JcJWViCkpYOsd4J0MxxVYm8DWU0ath86VwdtvcwIVK",
   "file": "",
   "condition": 1
  },
  {
-  "name": "Matias Davila",
-  "userName": "matias",
-  "fecha": "2021-05-12",
+  "name": "admin",
+  "userName": "admin",
+  "email": "admin@gmail.com",
+  "fecha": "2021-05-08",
   "domicilio": "rauch1019",
   "perfil": "comprar",
   "categorias": [
-   "moda",
-   "jugueteria",
-   "vidaSana"
+   "electro",
+   "hogar"
   ],
-  "password": "admin123",
-  "email": "mipcomputacion@gmail.com",
+  "password": "$2a$10$8WdCfaLLbl6JcJWViCkpYOsd4J0MxxVYm8DWU0ath86VwdtvcwIVK",
+  "password2": "admin",
+  "condition": 1,
+  "file": "user1621389247140.jpg",
   "id": 2
  },
  {
   "name": "Matias Davila",
-  "userName": "davila",
-  "fecha": "2021-05-03",
-  "domicilio": "dddddddddddddddddddddddddddddd",
+  "userName": "admin",
+  "email": "mipcomputacion@gmail.com",
+  "fecha": "2021-05-15",
+  "domicilio": "rauch1019",
   "perfil": "vender",
   "categorias": [
    "electro",
+   "moda",
    "hogar",
+   "jugueteria",
    "vidaSana"
   ],
-  "file": "user-1620940428249.jpg",
-  "password": "admin123",
+  "password": "$2a$10$tolVT8jP13IJWaOcObT3heJw7/74Tx5JS8pLz724IPEs.VQmh1BKe",
+  "password2": "admin123",
+  "condition": 1,
+  "file": "default.png",
   "id": 3
  },
  {
-  "name": "Matias Davila",
-  "userName": "davila",
-  "fecha": "2021-05-03",
-  "domicilio": "dddddddddddddddddddddddddddddd",
-  "perfil": "vender",
-  "categorias": [
-   "electro",
-   "hogar",
-   "vidaSana"
-  ],
-  "file": "user-1620940688019.jpg",
-  "password": "admin123",
-  "id": 4
- },
- {
-  "name": "matias",
-  "userName": "marte",
-  "fecha": "2021-05-09",
-  "domicilio": "rauch 1919",
-  "categorias": [
-   "jugueteria",
-   "vidaSana"
-  ],
-  "password": "fdasfdasdfsa",
-  "id": 5
- },
- {
-  "name": "karina",
-  "userName": "fdas",
-  "fecha": "2021-05-26",
-  "domicilio": "rauch1019",
-  "perfil": "vender",
-  "categorias": "hogar",
-  "password": "fdsafdsa",
-  "file": "default.png",
-  "id": 6
- },
- {
-  "name": "Matias Davila",
-  "userName": "fdas",
-  "fecha": "2021-05-11",
-  "domicilio": "rauch1019",
-  "perfil": "comprar",
-  "categorias": [
-   "hogar",
-   "jugueteria"
-  ],
-  "password": "dasfadsfa",
-  "file": "default.png",
-  "id": 7
- },
- {
-  "name": "marte",
-  "userName": "marte",
-  "fecha": "2021-05-04",
-  "domicilio": "marte",
-  "categorias": [
-   "electro",
-   "hogar"
-  ],
-  "file": "user-1620942123602.jpg",
-  "password": "fdasfdasf",
-  "id": 8
- },
- {
-  "name": "sss",
-  "userName": "sss",
-  "fecha": "2021-05-18",
-  "domicilio": "manchare2021",
-  "perfil": "comprar",
-  "categorias": [
-   "moda",
-   "hogar"
-  ],
-  "password": "sdsdsdsdsd",
-  "file": "default.png",
-  "id": 9
- },
- {
-  "name": "Matias Davila",
-  "userName": "matias",
-  "fecha": "2021-05-20",
-  "domicilio": "racuh 1019",
-  "categorias": [
-   "moda",
-   "jugueteria",
-   "vidaSana"
-  ],
-  "file": "user-1621016489308.jpg",
-  "password": "fdsfdasfdf",
-  "condition": 1,
-  "id": 10
- },
- {
-  "name": "",
-  "userName": "",
+  "name": "invitado",
+  "userName": "invitado",
+  "email": "invitado@gmail.com",
   "fecha": "2021-05-12",
-  "domicilio": "",
-  "password": "",
-  "file": "default.png",
-  "condition": 1,
-  "id": 11
- },
- {
-  "name": "Matias Davila",
-  "userName": "matias",
-  "fecha": "2021-05-16",
-  "domicilio": "rauch1019",
-  "perfil": "comprar",
-  "password": "fdasfdasfdas",
-  "file": "default.png",
-  "condition": 1,
-  "id": 12
- },
- {
-  "name": "Matias Davila",
-  "userName": "matias",
-  "fecha": "2021-05-16",
-  "domicilio": "racuh 1019",
-  "perfil": "comprar",
-  "password": "fdsafdsafasd",
-  "password2": "fdasfdsafdsa",
-  "file": "default.png",
-  "condition": 1,
-  "id": 13
- },
- {
-  "name": "karina",
-  "userName": "marte",
-  "fecha": "2021-05-13",
-  "domicilio": "rauch1019",
+  "domicilio": "invitado",
   "perfil": "vender",
   "categorias": [
-   "moda",
-   "jugueteria",
-   "vidaSana"
-  ],
-  "password": "12235612",
-  "password2": "",
-  "file": "default.png",
-  "condition": 1,
-  "id": 14
- },
- {
-  "name": "matias",
-  "userName": "dddddddddddddddddddddddddddddd",
-  "fecha": "2021-05-01",
-  "domicilio": "rauch 1919",
-  "perfil": "comprar",
-  "categorias": [
    "electro",
    "moda",
-   "hogar",
-   "jugueteria"
-  ],
-  "password": "123123123",
-  "password2": "123123123",
-  "file": "default.png",
-  "condition": 1,
-  "id": 15
- },
- {
-  "name": "matias",
-  "userName": "fdas",
-  "fecha": "2021-05-06",
-  "domicilio": "racuh 1019",
-  "perfil": "comprar",
-  "categorias": [
-   "moda",
-   "jugueteria",
-   "vidaSana"
-  ],
-  "password": "fdsafdsafdsa",
-  "password2": "fdsafdsafdsa",
-  "file": "default.png",
-  "condition": 1,
-  "id": 16
- },
- {
-  "name": "karina",
-  "userName": "dddddddddddddddddddddddddddddd",
-  "fecha": "2021-05-28",
-  "domicilio": "rauch1019",
-  "perfil": "comprar",
-  "categorias": [
-   "electro",
    "hogar",
    "jugueteria",
    "vidaSana"
   ],
-  "password": "123456789",
-  "password2": "123456789",
-  "file": "default.png",
-  "condition": 1,
-  "id": 17
- },
- {
-  "name": "checa checa",
-  "userName": "checa checa",
-  "fecha": "2021-05-06",
-  "domicilio": "checa checa",
-  "perfil": "comprar",
-  "categorias": [
-   "electro",
-   "hogar",
-   "vidaSana"
-  ],
-  "password": "123456789",
-  "password2": "123456789",
-  "condition": 1,
-  "id": 18
- },
- {
-  "name": "checa checa2",
-  "userName": "checa checa2",
-  "fecha": "2021-05-15",
-  "domicilio": "checa checa2",
-  "perfil": "vender",
-  "categorias": [
-   "moda",
-   "hogar",
-   "vidaSana"
-  ],
-  "password": "checa checa2",
-  "password2": "checa checa2",
-  "condition": 1,
-  "file": "user1621266835843.jpg",
-  "id": 19
- },
- {
-  "name": "karina",
-  "userName": "marte",
-  "fecha": "2021-04-29",
-  "domicilio": "rauch 1919",
-  "perfil": "comprar",
-  "categorias": [
-   "hogar",
-   "vidaSana"
-  ],
-  "password": "checa checa2",
-  "password2": "checa checa2",
+  "password": "$2a$10$Y.wZ6Rdh1pVFlptxZu1dseC7wCQGMKlLMhIdb7JRIMn9DXPObnIoa",
+  "password2": "admin123",
   "condition": 1,
   "file": "default.png",
-  "id": 20
- },
- {
-  "name": "checa checa23",
-  "userName": "checa checa23",
-  "fecha": "2021-05-06",
-  "domicilio": "checa checa23",
-  "perfil": "comprar",
-  "categorias": [
-   "hogar",
-   "vidaSana"
-  ],
-  "password": "checa checa2",
-  "password2": "checa checa2",
-  "condition": 1,
-  "file": "user1621267015769.jpg",
-  "id": 21
- },
- {
-    "name": "admin",
-    "userName": "admin",
-    "fecha": "2021-05-06",
-    "domicilio": "checa checa23",
-    "perfil": "comprar",
-    "categorias": [
-     "hogar",
-     "vidaSana"
-    ],
-    "password": "admin",
-    "password2": "admin",
-    "condition": 1,
-    "file": "user1621267015769.jpg",
-    "email":"admin",
-    "id": 22
-   }
+  "id": 4
+ }
 ]
