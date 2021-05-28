@@ -1,14 +1,5 @@
 [
  {
-  "category": "4",
-  "name": "karina delass",
-  "description": "jjhgfjfhgj",
-  "stock": "14",
-  "price": "14",
-  "id": "1",
-  "file": "product1621350724118.jpg"
- },
- {
   "category": "1",
   "name": "Macbook Pro 2022",
   "description": "Macbook Pro 2019 Mpxq2ll/a Intel Core i5 2.3 Ghz 8gb RAM 128gb SSD Pantalla 13.3\" Retina Apple Nueva Original. Importada de USA. Se entrega con la factura de compra para contar con la garantía del fabricante",
@@ -150,10 +141,9 @@
   "stock": 2
  },
  {
-  "oldFile": "product-1620939160004.jpg",
   "category": "3",
   "name": "matias davila",
-  "description": "wqwqwq matias",
+  "description": "   Estudiante licenciatura informática\r\n  [Especialidad en desarrollo de Software]\r\n \r\n • Node.js\r\n• Angular\r\n• React\r\n• java\r\n• JavaScript\r\n• Mysql, Postgres, Mongodb\r\n\r\n  www.linkedin.com/in/matias-davila",
   "stock": "14",
   "price": "450",
   "id": "17",

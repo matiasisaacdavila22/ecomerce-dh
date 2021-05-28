@@ -1,8 +1,9 @@
 function authMiddleware(req, res, next){
-    if(req.session.userLogueado != undefined){
-        next();
+
+    if(!req.session.userLogueado){
+        return res.redirect('/user/login');
     }else{
-        return res.redirect('/');
+        next();
     }
 }
 

@@ -9,6 +9,7 @@ const validations = require('../middlewares/validationsMiddleware')
 let storage = getMulterStorageConfig('../public/images/user','user')
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddlewar');
+const sgMail = require('../services/notificationes');
 
 let upload = multer({storage: storage});
 
@@ -19,14 +20,15 @@ router.get('/login', guestMiddleware, userController.login);
 router.get('/logout', userController.logout); 
 router.post('/loguear',validations.validetUserLogin, userController.loguear)
 
-router.get('/', authMiddleware, userController.list); 
+router.get('/', userController.list); 
 
-router.get('/search', authMiddleware, userController.search); 
+router.get('/search', userController.search); 
 
-router.get('/edit/:id', authMiddleware, userController.edit);
-router.put('/edit', upload.single('file'), validations.validetUserCreate, userController.update);
+router.get('/edit/:id',authMiddleware, userController.edit);
+router.put('/edit',authMiddleware, upload.single('file'), validations.validetUserCreate, userController.update);
 
 router.delete('/delete/:id',authMiddleware, userController.delete);
 
+router.get('/email', userController.sendEmail);
 
 module.exports = router;

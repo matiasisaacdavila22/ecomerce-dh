@@ -34,26 +34,6 @@
   "id": 2
  },
  {
-  "name": "Matias Davila",
-  "userName": "admin",
-  "email": "mipcomputacion@gmail.com",
-  "fecha": "2021-05-15",
-  "domicilio": "rauch1019",
-  "perfil": "vender",
-  "categorias": [
-   "electro",
-   "moda",
-   "hogar",
-   "jugueteria",
-   "vidaSana"
-  ],
-  "password": "$2a$10$tolVT8jP13IJWaOcObT3heJw7/74Tx5JS8pLz724IPEs.VQmh1BKe",
-  "password2": "admin123",
-  "condition": 1,
-  "file": "default.png",
-  "id": 3
- },
- {
   "name": "invitado",
   "userName": "invitado",
   "email": "invitado@gmail.com",
@@ -72,5 +52,23 @@
   "condition": 1,
   "file": "default.png",
   "id": 4
+ },
+ {
+  "name": "Matias Davila",
+  "userName": "admin",
+  "email": "mipcomputacion@gmail.com",
+  "fecha": "2021-06-06",
+  "domicilio": "racuh 1019",
+  "perfil": "vender",
+  "categorias": [
+   "electro",
+   "hogar",
+   "vidaSana"
+  ],
+  "password": "$2a$10$MWYrFlAOyN8knEcoPcvpsOyiLEeH473V08I3gZw89ugLa9WFXovDm",
+  "password2": "admin123",
+  "condition": 1,
+  "file": "default.png",
+  "id": 5
  }
 ]

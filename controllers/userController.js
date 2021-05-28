@@ -3,7 +3,8 @@ const { validationResult } = require('express-validator');
 let jsonDatabaseP = require('../model/jsonDatabase');
 let model = jsonDatabaseP('userDataBase')
 const bcrypt = require('bcryptjs');
-
+const Notifications = require('../services/notificationes');
+const sgMail = require('@sendgrid/mail')
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const controller = {
@@ -26,13 +27,27 @@ const controller = {
 			  ...req.body,	
 		   condition: 1,
 		   password : bcrypt.hashSync(req.body.password, 10)
-		  }
-		  model.create(userNew);
-		  return res.render('user/login');
-		}
+		  }	  
+		
+		
+	    Notifications.sendEmail(userNew)
+		.then(function(user){
+			model.create(user)
+		})
+ 	    .catch(function(error){
+			  console.log('el error es :'+error.message);
+		  })
+		    
+		return res.render('user/login');
+		 
+		  
+		  
+        }		 
+		
 		return res.render('user/register', {errors: errors.mapped(), old:req.body});
 
 	},
+	
 	login: (req, res) => {
 			return	res.render('user/login');
 	},
@@ -46,8 +61,8 @@ const controller = {
 					if(bcrypt.compareSync(password, userLoguear.password)){
 						delete userLoguear.password;
 						req.session.userLogueado = userLoguear;
-						if(req.body.remember != undefined){
-							res.cookie('userEmail', userLoguear.email, {maxAge: (100 * 60)*10 })
+						if(req.body.remember){
+							res.cookie('userEmail', userLoguear.email, {maxAge: (1000 * 60)*7 })
 						}
 						return	res.redirect('/product');
 					}else{
@@ -110,6 +125,30 @@ const controller = {
 
 	delete : (req, res) => {
 
+	},
+
+	sendEmail: async (req, res) => {
+		const {sandboxMode = false} = req.body;
+	
+		const msg = {
+			to:'mipcomputacion@gmail.com',
+			from: 'blackemailstore@gmail.com',
+			subject: 'Bienvenido a MercadoNegro',
+			text: 'mercadonegro te da la bienvenida a bordo de MeracadoNegro',
+			html:'<strong>bienvenida a bordo Matias</strong>',
+			mail_settings: {
+				sandbox_mode: {
+					enable: sandboxMode
+				}
+			}
+		};
+		try {
+			await sgMail.send(msg);
+		} catch (err) {
+			return res.status(err.code).send(err.message);
+		}
+	
+		res.status(201).send({success:true});
 	}
 };
 

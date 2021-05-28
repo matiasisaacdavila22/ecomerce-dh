@@ -1,5 +1,7 @@
 const express = require('express');
 const app = express();
+require('dotenv').config();
+//const app = require('./index')
 const rutasMain = require('./routes/mainRouter.js');
 const userRouter = require('./routes/userRouter.js');
 const productRouter = require('./routes/productRouter.js');
@@ -36,4 +38,6 @@ app.use((req, res, next) => {
 app.listen(puerto || 3000, function() {
     console.log("Servidor corriendo en el puerto 3000");
 });
+
+
  
