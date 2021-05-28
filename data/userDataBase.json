@@ -70,5 +70,22 @@
   "condition": 1,
   "file": "default.png",
   "id": 5
+ },
+ {
+  "name": "Matias Davila",
+  "userName": "marte",
+  "email": "marianaprima4@gmail.com",
+  "fecha": "2021-05-13",
+  "domicilio": "rauch1019",
+  "perfil": "comprar",
+  "categorias": [
+   "hogar",
+   "vidaSana"
+  ],
+  "password": "$2a$10$8P6lb2iIxIhiqVAHjby0quGyhVVIaGLe7Sl03wHjHjPUA8maaGER2",
+  "password2": "admin123",
+  "condition": 1,
+  "file": "default.png",
+  "id": 6
  }
 ]

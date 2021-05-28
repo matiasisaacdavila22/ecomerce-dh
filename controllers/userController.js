@@ -125,30 +125,6 @@ const controller = {
 
 	delete : (req, res) => {
 
-	},
-
-	sendEmail: async (req, res) => {
-		const {sandboxMode = false} = req.body;
-	
-		const msg = {
-			to:'mipcomputacion@gmail.com',
-			from: 'blackemailstore@gmail.com',
-			subject: 'Bienvenido a MercadoNegro',
-			text: 'mercadonegro te da la bienvenida a bordo de MeracadoNegro',
-			html:'<strong>bienvenida a bordo Matias</strong>',
-			mail_settings: {
-				sandbox_mode: {
-					enable: sandboxMode
-				}
-			}
-		};
-		try {
-			await sgMail.send(msg);
-		} catch (err) {
-			return res.status(err.code).send(err.message);
-		}
-	
-		res.status(201).send({success:true});
 	}
 };
 

@@ -29,6 +29,4 @@ router.put('/edit',authMiddleware, upload.single('file'), validations.validetUse
 
 router.delete('/delete/:id',authMiddleware, userController.delete);
 
-router.get('/email', userController.sendEmail);
-
 module.exports = router;

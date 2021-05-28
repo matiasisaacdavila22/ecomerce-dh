@@ -108,3 +108,7 @@ registro al ingresar en la pagina /register en la fecha : Thu May 27 2021 22:54:
 registro al ingresar en la pagina /register en la fecha : Thu May 27 2021 22:54:31 GMT-0300 (GMT-03:00)
 registro al ingresar en la pagina /register en la fecha : Thu May 27 2021 23:00:04 GMT-0300 (GMT-03:00)
 registro al ingresar en la pagina / en la fecha : Thu May 27 2021 23:05:53 GMT-0300 (GMT-03:00)
+registro al ingresar en la pagina / en la fecha : Thu May 27 2021 23:27:21 GMT-0300 (GMT-03:00)
+registro al ingresar en la pagina / en la fecha : Thu May 27 2021 23:27:28 GMT-0300 (GMT-03:00)
+registro al ingresar en la pagina / en la fecha : Thu May 27 2021 23:31:46 GMT-0300 (GMT-03:00)
+registro al ingresar en la pagina /register en la fecha : Thu May 27 2021 23:32:16 GMT-0300 (GMT-03:00)
