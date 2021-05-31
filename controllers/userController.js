@@ -32,13 +32,14 @@ const controller = {
 		
 	    Notifications.sendEmail(userNew)
 		.then(function(user){
-			model.create(user)
+			//model.create(user)
+			return true;
 		})
  	    .catch(function(error){
 			  console.log('el error es :'+error.message);
 		  })
 		    
-		return res.render('user/login');
+	//	return res.render('user/login');
 		 
 		  
 		  
